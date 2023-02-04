@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <title>Weatherino</title>
+        <link type="text/css" href="safety.css" rel="stylesheet"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    </head>
+    <body id="body">
+
+        <!-- Manue bar -->
+        <div class="top-nav" id="topNav">
+            <div class="wrapper">
+                
+                <nav>
+                    <div class="webname"><a href="index.html">WeaTherino</a></div>
+                    <ul class="top-nav-items">
+                        <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                        <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-bar">
+                    <div class="mobile-menu-icon" onclick="mobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div id="mobile-menu-container">
+                        <div id="menu-close-icon" onclick="normal()">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+
+        <!-- Preloader -->
+        <div id="loader"></div>
+
+        <!-- Content Section 1 -->
+        <div class="wrapper">
+            <div class="safety-wrapper">
+                <div class="heading">Flood Safety Tips </div>
+                <div class="upper">
+                    <div class="description"><p>A thunderstorm, also known as an electrical storm or a lightning storm, is a storm characterized by the presence of lightning[1] and its acoustic effect on the Earth's atmosphere, known as thunder.  Thunderstorms occur throughout the world, even in the polar regions, with the greatest frequency in tropical rainforest areas, where they may occur nearly daily. At any given time approximately 2,000 thunderstorms are occurring on Earth. Kampala and Tororo in Uganda have each been mentioned as the most thunderous places on Earth.</p></div>
+                    <div class="image" style="background-image: url(images/img6.jpg);"></div>
+                </div>
+                <div class="lower">
+                    <div class="content">
+                        <h3>Precaution Taken Before Thunderstrom</h3>
+                        <ul>
+                            <li>Know the names of local counties, cities, and towns, as these are how warnings are described. </li>
+                            <li>Monitor forecasts and weather conditions and know whether thunderstorms are likely in the area. </li>
+                            <li>Be alert for natural signs of an approaching storm.</li>
+                            <li>Cancel or reschedule outdoor events (to avoid being caught outdoors when a storm hits). </li>
+                            <li>Take action early so you have time to get to a safe place. </li>
+                            <li>Get inside a substantial building or hard-topped metal vehicle before threatening weather arrives. </li>
+                            <li>If you hear thunder, get to the safe place immediately. </li>
+                            <li>Avoid open areas like hilltops, fields, and beaches, and don't be or be near the tallest objects in an area when thunderstorms are occurring. </li>
+                            <li>Don't shelter under tall or isolated trees during thunderstorms. </li>
+                            <li>If in the woods, put as much distance as possible between you and any trees during thunderstorms. </li>
+                            <li>If in a group, spread out to increase the chances of survivors who could come to the aid of any victims from a lightning strike.</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3>Precaution Taken During and After Thunderstrom</h3>
+                        <ul> 
+                            <li>Take action immediately upon hearing thunder. Anyone close enough to the storm to hear thunder can be struck by lightning. </li>
+                            <li>Avoid electrical appliances, including corded telephones. Cordless and wireless telephones are safe to use during a thunderstorm. </li>
+                            <li>Close and stay away from windows and doors, as glass can become a serious hazard in high wind. </li>
+                            <li>Do not bathe or shower, as plumbing conducts electricity.</li>
+                            <li>If driving, safely exit the roadway, turn on hazard lights, and park. Remain in the vehicle and avoid touching metal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section 2 -->
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <div class="heading">
+                   Other Safety Tips 
+                </div>
+                <div class="content">
+                    <!-- Flood -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/flood.jpg);"></div>
+                        <div class="right"><a href="flood.html">Flood Safety Tips</a></div>
+                    </div>
+                    <!-- Heat Wave -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/heatwave.jpg);"></div>
+                        <div class="right"><a href="heatwave.html">Heat Wave Safety Tips</a></div>
+                    </div>
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="#"  class="active">Thunder Safety Tips</a></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- Hail -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/hail.jpg);"></div>
+                        <div class="right"><a href="hail.html">Hail Safety Tips</a></div>
+                    </div>
+                    <!-- Forestfire -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/forest_fire.jpg);border: 2px solid #d8d8d8;"></div>
+                        <div class="right"><a href="forestfire.html">Forest-Fire Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+                
+                <div class="responsive_content">
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="#"  class="active">Thunder Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="wrapper">
+                <div class="footer-container">
+                    <div class="footer-left">WeaTherino</div>
+                    <div class="footer-center">
+                        <h4 class="list-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <p class="copyright">This website is devloped by- Siliguri College( Dept. of Computer Science) <br/>&copy;2021-22</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            /* Responsive purpose */
+            function mobileMenu()
+                {
+                    var click = document.getElementById("mobile-menu-container");
+                    if(click.style.display === "block")
+                    {
+                        click.style.display= "none";
+                    }
+                    else {
+                        click.style.display = "flex";
+                    }
+                    
+                }
+
+            function normal() {
+                var click = document.getElementById("mobile-menu-container");
+                if(click.style.display === "none")
+                {
+                    click.style.display= "block";
+                }
+                else {
+                    click.style.display = "none"
+                }
+            }
+        </script> 
+        <script src="https://kit.fontawesome.com/124cc9a039.js" crossorigin="anonymous"></script>
+        <script>
+            var loading= document.getElementById("loader");
+            window.addEventListener("load",function(){
+                loading.style.display= "none";
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <title>Weatherino</title>
+        <link type="text/css" href="safety.css" rel="stylesheet"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    
+    </head>
+    <body id="body">
+
+        <!-- Manue bar -->
+        <div class="top-nav" id="topNav">
+            <div class="wrapper">
+                
+                <nav>
+                    <div class="webname"><a href="index.html">WeaTherino</a></div>
+                    <ul class="top-nav-items">
+                        <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                        <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-bar">
+                    <div class="mobile-menu-icon" onclick="mobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div id="mobile-menu-container">
+                        <div id="menu-close-icon" onclick="normal()">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+
+        <!-- Preloader -->
+        <div id="loader"></div>
+
+        <!-- Content Section 1 -->
+        <div class="wrapper">
+            <div class="safety-wrapper">
+                <div class="heading">Hail Safety Tips </div>
+                <div class="upper">
+                    <div class="description"><p>Hail is a form of solid precipitation. It consists of balls or irregular lumps of ice, each of which is called a hailstone. Ice pellets generally fall in cold weather, while hail growth is greatly inhibited during cold surface temperatures. Kericho reached the world record for 132 days of hail in one year.</p></div>
+                    <div class="image" style="background-image: url(images/hail1.jpg);"></div>
+                </div>
+                <div class="lower">
+                    <div class="content">
+                        <h3>Precautions</h3>
+                        <ul>
+                            <li>Do not underestimate the intensity of the hailstorm. Even if the local weather agency forecasts hailstorms that are not so intense, make sure to keep the cars parked under cover in the garage.</li>
+                            <li>Protect the roof of your house from damage by covering it with plastic or aluminum sheets so they can bear the brunt incase the hailstones are too big and roof doesn't get broken or dented in any way.</li>
+                            <li>During a hailstorm, avoid stepping out to see it since hailstones are not the only thing that can injure, hailstorms are often accompanied by violent lightning.</li>
+                            <li>Those on the road should stop and take cover during a hailstorm. Hailstones can dent the roof of the car and damage the windscreen. So pull over and be safe inside your car.</li>
+                            <li>Hail falls at fast speeds, and it can cause injury to those in its path. Therefore people riding two wheelers are often much more exposed to the bad weather and damage from the piercing hailstones than those with four wheelers. Bikers should remember to wear some extra protective layer of jackets and hand gloves to prevent injury.</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3>During the Hailstorm</h3>
+                        <ul>
+                            <li>Avoid finding shelter under trees or in areas like culverts that can suddenly fill with water.</li>
+                            <li>Stay indoors and away from windows, glass doors and skylights.</li>
+                            <li>Close drapes or blinds to protect yourself from broken glass and flying debris.</li>
+                            <li>Keep pets indoors and provide shelter for farm animals.</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3>After the Hailstorm Stop</h3>
+                        <ul>
+                            <li>If there's a power outage, turn off electronics and appliances to avoid damage from a power surge.</li>
+                            <li>Use a flashlight instead of candles, which can be a fire hazard.</li>
+                            <li>Turn off valves, if you detect any gas leaks.</li>
+                            <li>Clean up debris and make any temporary repairs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section 2 -->
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <div class="heading">
+                   Other Safety Tips 
+                </div>
+                <div class="content">
+                    <!-- Flood -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/flood.jpg);"></div>
+                        <div class="right"><a href="flood.html">Flood Safety Tips</a></div>
+                    </div>
+                    <!-- Heat Wave -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/heatwave.jpg);"></div>
+                        <div class="right"><a href="heatwave.html">Heat Wave Safety Tips</a></div>
+                    </div>
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="thunderstorm.html">Thunder Safety Tips</a></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- Hail -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/hail.jpg);"></div>
+                        <div class="right"><a href="#"  class="active">Hail Safety Tips</a></div>
+                    </div>
+                    <!-- Forestfire -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/forest_fire.jpg);border: 2px solid #d8d8d8;"></div>
+                        <div class="right"><a href="forestfire.html">Forest-Fire Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+                
+                <div class="responsive_content">
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="thunderstorm.html">Thunder Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="wrapper">
+                <div class="footer-container">
+                    <div class="footer-left">WeaTherino</div>
+                    <div class="footer-center">
+                        <h4 class="list-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <p class="copyright">This website is devloped by- Siliguri College( Dept. of Computer Science) <br/>&copy;2021-22</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            /* Responsive purpose */
+            function mobileMenu()
+                {
+                    var click = document.getElementById("mobile-menu-container");
+                    if(click.style.display === "block")
+                    {
+                        click.style.display= "none";
+                    }
+                    else {
+                        click.style.display = "flex";
+                    }
+                    
+                }
+
+            function normal() {
+                var click = document.getElementById("mobile-menu-container");
+                if(click.style.display === "none")
+                {
+                    click.style.display= "block";
+                }
+                else {
+                    click.style.display = "none"
+                }
+            }
+        </script> 
+        <script src="https://kit.fontawesome.com/124cc9a039.js" crossorigin="anonymous"></script>
+        <script>
+            var loading= document.getElementById("loader");
+            window.addEventListener("load",function(){
+                loading.style.display= "none";
+            })
+        </script>
+    </body>
+</html>

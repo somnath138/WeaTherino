@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <title>Weatherino</title>
+        <link type="text/css" href="index.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&display=swap" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        
+        <style></style>
+    </head>
+
+    <body id="body">
+
+
+        <!-- Menu bar -->
+        <div class="top-nav" id="topNav">
+            <div class="wrapper">
+                
+                <nav>
+                    <div class="webname"><a href="index.html">WeaTherino</a></div>
+                    <ul class="top-nav-items">
+                        <li><a href="#" class="page-active"><i class="fa fa-house-chimney"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                        <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                        <li class="gps-search" id="gps-button" onclick="locationData_gps()"><a href="#"><i class="fa fa-globe"></i>GPS-Search</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-bar">
+                    <div class="mobile-menu-icon" onclick="mobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div id="mobile-menu-container">
+                        <div id="menu-close-icon" onclick="normal()">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <ul>
+                            <li><a href="#" class="page-active"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                            <li class="gps-search" id="gps-button" onclick="locationData_gps();normal()"><a href="#"><i class="fa fa-globe"></i>GPS - search</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+
+        <!-- Preloader -->
+        <div id="loader"></div>
+
+        <!-- messages -->
+
+        <!-- message 1 :: ask for gps access -->
+        <div class="alert center" id= "alert">
+            <div class="title">Click OK!!</div>
+            <div class="message">If you want to know the weather status in your area then please provide us the gps coordinate, to do so click 'Ok'.</div>
+            <div class="buttons">
+                <div class="button" id="dismiss1">cancel</div>
+                <div class="button" id="allow1">ok</div>
+            </div>
+        </div>
+
+        <!-- message 2 :: when browswr not allow us to access gps -->
+        <div class="location-alert center" id="location-alert1">
+            <div class="title">Permission Denied!!</div>
+            <div class="message">Your browser don't allow us to access your location. Go to your browser settings and allow this site to access the location.</div>
+            <div class="buttons">
+                <div class="button" id="allow2">ok</div>
+            </div>
+        </div>
+
+        <!-- message 3 :: user input an invalid name -->
+        <!-- <div class="alert center" id= "name_alert">
+            <div class="title">Invalide Name!!</div>
+            <div class="message">The name you enter is not in our database! Please try again with a valid name.</div>
+            <div class="buttons">
+                <div class="button" id="allow3">ok</div>
+            </div>
+        </div> -->
+
+        <!-- Header Section -->
+        <header id="Header">
+            <div class="header-wrapper">
+                <div class="header-weather">
+                    <div class="header-time-outer">
+                        <div class="header-time" id="time"><!--12:30--> <div class="am-pm" ><!--AM--></div></div>
+                        <div class="header-date" id="date"><!--06/09/2021--></div>
+                        <div class="header-time-zone" id="time-zone"> <!--New Delhi / India--> </div>
+                    </div>
+                    <div class="header-weather-data">
+                        <div class="data-name">
+                            <div>Humidity </div>
+                            <div>Temperature </div>
+                            <div>Wind speed </div>
+                            <div>Weather </div>
+                        </div>
+                        <div class="data-value" id="current-weather-values">
+                            <div><!--87 %--></div>
+                            <div><!--30 &deg;c--></div>
+                            <div><!--20 m/s--></div>
+                            <div><!--cloudy --></div>
+                        </div>
+                    </div>
+                </div>
+               <div class="header_search">
+                <div class="search-button" id="search-button1" onclick="locationData()"></div>
+                <input type="search"  class="search-box" onsearch="locationData()" placeholder="Enter city name"/>
+                <!-- <div class="gps-search" id="gps-button" onclick="locationData_gps()">GPS</div> -->
+               </div>
+            </div>
+        </header>
+
+        <!-- Content Section 1 -->
+        
+
+        <div class="wrapper">
+
+            <!-- 1 -->
+
+            <div class="weather-forecast">
+                <div class="current-weather" id="current-forecast1">
+                    <div class="upper">
+                        <div class="left">
+                            <div class="day"><!--Monday--></div>
+                            <div class="date"><!--06/09/2021--></div>
+                            <div class="time-zone"><!--New Delhi / India--></div>
+                        </div>
+                        <div class="right">
+                            <!-- <img src=" http://openweathermap.org/img/wn/10d@2x.png" /> -->
+                        </div>
+                    </div>
+                    <div class="lower">
+                        <div class="data-name">
+                            <div><!--Max Temp --></div>
+                            <div><!--Min Temp --> </div>
+                            <div><!--Humidity --></div>
+                            <div><!--Wind speed --></div>
+                        </div>
+                        <div class="data-value">
+                            <div><!--87 %--></div>
+                            <div><!--30 &deg;c--></div>
+                            <div><!--120 --></div>
+                            <div><!--20 m/s--></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forecast" id="weather-forecast1">
+                    <div class="weather-data">
+                        <div class="upper"  id="weather-forecast1">
+                            <div class="left">
+                                <!--<img src=" http://openweathermap.org/img/wn/10d@2x.png" />-->
+                            </div>
+                            <div class="right" >
+                                <div class="day"><!--Tuesday--></div>
+                                <div class="date"><!--07/09/2021--></div>
+                                <div class="time-zone"><!--New Delhi / India--></div>
+                            </div>
+                        </div>
+                        <div class="lower">
+                            <div class="data-name">
+                                <div><!--Max Temp --></div>
+                                <div><!--Min Temp  --></div>
+                                <div><!--Humidity --></div>
+                                <div><!--Wind speed --></div>
+                            </div>
+                            <div class="data-value">
+                                <div><!--87 %--></div>
+                                <div><!--30 &deg;c--></div>
+                                <div><!--120 --></div>
+                                <div><!--20 m/s--></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-container">
+                <div class="data-name-column">
+                    <div class="row">Day</div>
+                    <div class="row">Date</div>
+                    <div class="row">Temparature
+                        <div class="sub-row">Day</div>
+                        <div class="sub-row">Night</div>
+                        <div class="sub-row">Max</div>
+                        <div class="sub-row">Min</div>
+                    </div>
+                    <div class="row weather">Status</div>
+                    <div class="row">Humidity</div>
+                    <div class="row">Wind Speed</div>
+                    <div class="row">Pressure</div>
+                    <div class="row">Sunrise</div>
+                    <div class="row">Sunset</div>
+                    <div class="row">Moonrise</div>
+                    <div class="row">Moonset</div>
+                </div>
+                <div class="table-values" id="table-values">
+                    <div class="column">
+                        <div class="row"><!--Monday--></div>
+                        <div class="row"><!--06/10/2021--></div>
+                        <div class="row"> 
+                            <div class="sub-row"><!--30 &deg;c--></div>
+                            <div class="sub-row"><!--32 &deg;c--></div>
+                            <div class="sub-row"><!--33 &deg;c--></div>
+                            <div class="sub-row"><!--29 &deg;c--></div>
+                        </div>
+                        <div class="row weather"><!--Clear Sky--></div>
+                        <div class="row"><!--46%--></div>
+                        <div class="row"><!--2 m/s--></div>
+                        <div class="row"><!--1006--></div>
+                        <div class="row"><!--1006--></div>
+                        <div class="row"><!--1006--></div>
+                        <div class="row"><!--1006--></div>
+                        <div class="row"><!--1006--></div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- Content Section 2 -->
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <div class="heading">
+                    Safety Tips 
+                </div>
+                <div class="content">
+                    <!-- Flood -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/flood.jpg);"></div>
+                        <div class="right"><a href="flood.html">Flood Safety Tips</a></div>
+                    </div>
+                    <!-- Heat Wave -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/heatwave.jpg);"></div>
+                        <div class="right"><a href="heatwave.html">Heat Wave Safety Tips</a></div>
+                    </div>
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="thunderstorm.html">Thunder Safety Tips</a></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- Hail -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/hail.jpg);"></div>
+                        <div class="right"><a href="hail.html">Hail Safety Tips</a></div>
+                    </div>
+                    <!-- Forestfire -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/forest_fire.jpg);border: 2px solid #d8d8d8;"></div>
+                        <div class="right"><a href="forestfire.html">Forest-Fire Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+                
+                <div class="responsive_content">
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="thunderstorm.html">Thunder Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <footer>
+            <div class="wrapper">
+                <div class="footer-container">
+                    <div class="footer-left">WeaTherino</div>
+                    <div class="footer-center">
+                        <h4 class="list-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="#" class="page-active"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <p class="copyright">This website is devloped by- Siliguri College( Dept. of Computer Science) <br/>&copy;2021-22</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="index.js"></script>
+        <script src="https://kit.fontawesome.com/124cc9a039.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            var loading= document.getElementById("loader");
+            window.addEventListener("load",function(){
+                loading.style.display= "none";
+            })
+        </script>
+    </body>
+</html>

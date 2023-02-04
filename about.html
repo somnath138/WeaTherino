@@ -1,0 +1,474 @@
+<html>
+    <head>
+        <title>Weatherino</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&display=swap" rel="stylesheet">
+ 
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            html {
+                font-family: sans-serif;
+            }
+            a
+            {
+                text-decoration: none;
+            }
+            #loader{
+                background: #fff url(images/loader.gif) no-repeat center;
+                background-size: 50%;
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                z-index: 17;
+            }
+            .wrapper
+            {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .wrapper p
+            {
+                line-height: 2;
+                margin-bottom: 20px;
+            }
+
+            /* Top nav */
+
+             .top-nav {
+                position: sticky;
+                top: 0;
+                /* background-color: #1d2c2c; */
+                background-color: black;
+                z-index: 20;
+                border-bottom: solid 3px #fcfcfc;
+            }
+            .top-nav .wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .top-nav nav{
+                display: flex;
+                width: 100%;
+                margin: 4px 0px;
+            }
+            .webname {
+                margin-top: 14px;
+                margin-bottom: 10px;
+            }
+            .top-nav nav .webname a{
+                color: #fff;
+                text-decoration: none;
+                font-family: 'Roboto Serif', serif;
+                font-weight: 700;
+                font-size: 25px;
+                margin-right: 25px;
+            }
+            .top-nav nav ul{
+                list-style: none;
+                display: flex;
+                margin: 4px auto;
+            }
+            .top-nav nav ul li{
+                padding: 10px 2px;
+                margin: 5px 2px;
+            }
+            .top-nav nav ul li:hover{
+                background: #f5f2f217;
+                text-decoration: underline;
+                border-radius: 8px;
+            }
+            .top-nav nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-family: 'Roboto Mono', monospace;
+                font-weight: 600;
+                margin: 0 18px;
+                text-transform: capitalize;
+                font-size: 17px;
+            }
+            .top-nav nav ul li a .fa{
+                color: #fff;
+                margin-right: 5px;
+            }
+            .top-nav nav ul li a:hover,
+            .top-nav .page-active,
+            footer .page-active {
+                color: #fec89a;
+            }
+
+
+            /* Content Section */
+
+            .about{
+                padding: 10px;
+            }
+            .about p{
+                margin-top: 10px;
+                color: gray;
+                font-size: 15px;
+            }
+            .about ul{
+                list-style-type: square;
+                padding: 20px;
+                color: gray;
+            }
+            .about ul li{
+                margin-bottom: 10px;
+            }
+            .about ul li ul{
+                width: 80%;
+                list-style-type: disc;
+                font-weight: bold;
+                margin: 0 auto;
+            }
+            
+            /* Footer */
+
+            footer
+            {
+                background: #000;
+                color: #fcfcfc;
+                padding: 36px;
+                margin-top: 50px;
+            }
+
+            footer a {
+                text-decoration: none;
+                color: #fcfcfc;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            footer .footer-container {
+                display: flex;
+            }
+
+            footer ul {
+                list-style: none;
+                margin-top: 16px;
+            }
+
+            footer ul li {
+                margin: 12px 8px;
+            }
+            footer p.copyright
+            {
+                pointer-events: none;
+                padding: 10px;
+                font-size: 15px;
+                text-align: center;
+                margin: 0px;
+                line-height: 2;
+            }
+            footer a:hover {
+                text-decoration: underline;
+                color: #fec89a;
+            }
+            footer .footer-left,
+            footer .footer-center{
+                width: 30%;
+                margin: auto;
+                text-align: center;
+            }
+            footer .footer-center  ul li a .fa{
+                color: #fff;
+                margin-right: 5px;
+            }
+            footer .footer-center .list-title{
+                font-size: 20px;
+                font-weight: 600;
+            }
+            footer .footer-left{
+                color: #fff;
+                text-decoration: none;
+                font-family: 'Roboto Serif', serif;
+                font-weight: 700;
+                font-size: 25px;
+                margin-right: 25px; 
+            }
+            footer .footer-right{
+                width: 40%;
+            }
+
+            /* hidden items */
+
+            .top-nav .wrapper  .menu-bar ,
+            #mobile-menu-container,
+            #menu-close-icon {
+                display: none;
+            }
+
+
+
+            /* Responsive */
+            @media (max-width:890px) {
+                .top-nav nav ul{
+                    width: 100%;
+                    margin: 0px;
+                }
+                .top-nav nav ul li a{
+                    margin: 0px 10px;
+                }
+            }
+            @media (max-width:810px){
+                .top-nav .wrapper nav .top-nav-items{
+                    display: none;
+                }
+                .top-nav .wrapper .menu-bar{
+                    display: block;
+                    margin-top: auto;
+                    margin-bottom: 22px;
+                }
+                .top-nav nav{
+                    width: 20%;
+                }
+                /* Mobile navigation menu */
+                #mobile-menu-container {
+                    display: none;
+                    position: fixed;
+                    flex-direction: column;
+                    background: #222222e8;
+                    height: 100vh;
+                    z-index: 200;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 500ms cubic-bezier(0.03,0.95,0.11,1.09);
+                }
+
+                #mobile-menu-container ul {
+                    list-style: none;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                #mobile-menu-container ul li {
+                    margin: 16px auto;
+                }
+
+                #mobile-menu-container ul li a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Roboto Mono', monospace;
+                    font-weight: 600;
+                    margin: 0 25px;
+                    text-transform: capitalize;
+                    font-size: 17px;
+                }
+                #mobile-menu-container ul li a .fa{
+                    color: #fff;
+                    margin-right: 6px;
+                }
+                #mobile-menu-container ul li  a:hover ,
+                #mobile-menu-container  .page-active {
+                text-decoration: underline;
+                color: #d68c45;
+                }
+                .mobile-menu-icon{
+                    margin: 0px 25px;
+                }
+                .mobile-menu-icon i.fa,
+                #menu-close-icon i.fa {
+                    color: #f5f5f5;
+                    font-size: 22px;
+                }
+                #menu-close-icon {
+                    display: block;
+                    z-index: 300;
+                    background-color: #222;
+                    cursor: pointer;
+                    padding: 16px;
+                    margin: 4px;
+                }
+                
+            }
+            @media (max-width:700px) {
+                
+                #loader{
+                    background-size: 60%;
+                }
+                .wrapper {
+                    width: 95%;
+                }
+            }
+            @media (max-width:600px){
+                .top-nav nav ul li a{
+                    font-size: 12px;
+                    margin: 0px 15px;
+                }
+            }
+            @media (max-width:580px){
+    
+                footer .footer-container{
+                    flex-direction: column;
+                }
+                footer .footer-left,
+                footer .footer-center,
+                footer .footer-right{
+                    width: 60%;
+                    text-align: center;
+                    margin: 0 auto;
+                    padding-bottom: 15px;
+                }
+            }
+            @media (max-width:530px){
+                #loader{
+                    background-size: 70%;
+                }
+            }
+            @media (max-width:480px){
+                footer .footer-container{
+                    flex-direction: column;
+                }
+                footer .footer-left,
+                footer .footer-center,
+                footer .footer-right{
+                    text-align: center;
+                }
+                
+            }
+            @media (max-width:440px){
+                .top-nav nav:nth-child(2){
+                    display: none;
+                }
+            }
+            @media(max-width: 370px){
+
+                #loader{
+                    background-size: 85%;
+                }
+            }
+        </style>
+    </head>
+    <body id="body">
+
+        <!-- Manue bar -->
+        <div class="top-nav" id="topNav">
+            <div class="wrapper">
+                
+                <nav>
+                    <div class="webname"><a href="index.html">WeaTherino</a></div>
+                    <ul class="top-nav-items">
+                        <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                        <li><a href="#" class="page-active"><i class="fa fa-address-card"></i>About</a></li>
+                        <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-bar">
+                    <div class="mobile-menu-icon" onclick="mobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div id="mobile-menu-container">
+                        <div id="menu-close-icon" onclick="normal()">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="#" class="page-active"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+
+        <!-- Preloader -->
+        <div id="loader"></div>
+
+        <!-- Content Section -->
+        <div class="wrapper">
+            <div class="about">
+            <p>Hello sir/madam, We ( Soumita Ganguly, Aritra Paul, Sourav Roy Dalai, Rejaul Karim, Somnath Das and Himangshu Ghosh ) are the students of Siliguri College developing this site as our project of final semester( VI).</p>
+            <p>This site can show you the weather status in detail, also we hope that this site can help the students who studied weather related topics. All the features provided by this site are described below :-</p>
+            <ul>
+                <li>Can help you to find out the current weather condition of your area through GPS coordinates or by searching  through area name.</li>
+                <li>It not only so you just the current weather status, It also show the weather data of   7 days.</li>
+                <li>Below are some of the weather components that this site displays :-
+                    <ul>
+                        <li>Daytime Temperature</li>
+                        <li>Maximum Temperature</li>
+                        <li>Night Temperature</li>
+                        <li>Minimum Temperature</li>
+                        <li>Weather  Status</li>
+                        <li>Humidity</li>
+                        <li>Wind Speed</li>
+                        <li>Pressure</li>
+                        <li>Time of Sunrise</li>
+                        <li>Time of Sunset</li>
+                        <li>Time of Moonrise</li>
+                        <li>Time of Moonset</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Thank you for visiting our site!!</p>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <footer>
+            <div class="wrapper">
+                <div class="footer-container">
+                    <div class="footer-left">WeaTherino</div>
+                    <div class="footer-center">
+                        <h4 class="list-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="#" class="page-active"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <p class="copyright">This website is devloped by- Siliguri College( Dept. of Computer Science) <br/>&copy;2021-22</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            /* Responsive purpose */
+            function mobileMenu()
+                {
+                    var click = document.getElementById("mobile-menu-container");
+                    if(click.style.display === "block")
+                    {
+                        click.style.display= "none";
+                    }
+                    else {
+                        click.style.display = "flex";
+                    }
+                    
+                }
+
+            function normal() {
+                var click = document.getElementById("mobile-menu-container");
+                if(click.style.display === "none")
+                {
+                    click.style.display= "block";
+                }
+                else {
+                    click.style.display = "none"
+                }
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/124cc9a039.js" crossorigin="anonymous"></script>
+        <script>
+            var loading= document.getElementById("loader");
+            window.addEventListener("load",function(){
+                loading.style.display= "none";
+            })
+        </script>
+    </body>
+</html>

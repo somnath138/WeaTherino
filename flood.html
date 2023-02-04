@@ -1,0 +1,194 @@
+<html>
+    <head>
+        <title>Weatherino</title>
+        <link type="text/css" href="safety.css" rel="stylesheet"/>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto+Serif:ital,opsz,wght@1,8..144,700&display=swap" rel="stylesheet">
+ 
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    </head>
+    <body id="body">
+
+        <!-- Manue bar -->
+        <div class="top-nav" id="topNav">
+            <div class="wrapper">
+                
+                <nav>
+                    <div class="webname"><a href="index.html">WeaTherino</a></div>
+                    <ul class="top-nav-items">
+                        <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                        <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu-bar">
+                    <div class="mobile-menu-icon" onclick="mobileMenu()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div id="mobile-menu-container">
+                        <div id="menu-close-icon" onclick="normal()">
+                            <i class="fa fa-xmark"></i>
+                        </div>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+            </div>
+        </div>
+
+        <!-- Preloader -->
+        <div id="loader"></div>
+
+        <!-- Content Section 1 -->
+        <div class="wrapper">
+            <div class="safety-wrapper">
+                <div class="heading">Flood Safety Tips </div>
+                <div class="upper">
+                    <div class="description"><p>Each year, more deaths occur because of flooding than any other hazard related to thunderstorms. The most common flood deaths occur when a vehicle is driven into hazardous floodwater. Fortunately, during a flood, you can take steps to protect yourself, your family, and your home.</p></div>
+                    <div class="image" style="background-image: url(images/flood1.jpg);"></div>
+                </div>
+                <div class="lower">
+                    <div class="content">
+                        <h3>During a Flood Watch or Warning</h3>
+                        <ul>
+                            <li>Gather emergency supplies, including non-perishable food and water. Store at least 1 gallon of water per day for each person and each pet. Store at least a 3-day supply.</li>
+                            <li>Listen to your local radio or television station for updates.</li>
+                            <li>Have immunization records handy (or know the year of your last tetanus shot). Store immunization records in a waterproof container.</li>
+                            <li>Bring in outdoor items (lawn furniture, grills, trash cans) or tie them down securely.</li>
+                            <li>If evacuation appears necessary, turn off all utilities at the main power switch and close the main gas valve.</li>
+                            <li>Leave areas subject to flooding such as low spots, canyons, washes, etc. (Remember: avoid driving through flooded areas and standing water).</li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3>After Flooding Occurs</h3>
+                        <ul>
+                            <li>Avoid driving through flooded areas and standing water. As little as six inches of water can cause you to lose control of your vehicle.</li>
+                            <li>Do not drink flood water, or use it to wash dishes, brush teeth, or wash/prepare food. Drink clean, safe water.</li>
+                            <li>If you evacuated, return to your home only after local authorities have said it is safe to do so.</li>
+                            <li>Listen for boil water advisories. Local authorities will let you know if your water is safe for drinking and bathing. During a water advisory, use only bottled, boiled, or treated water for drinking, cooking, etc.</li>
+                            <li>When in doubt, throw it out! Throw away any food and bottled water that comes/may have come into contact with floodwater.</li>
+                            <li>Prevent carbon monoxide (CO) poisoning. Use generators at least 20 feet from any doors, windows, or vents. If you use a pressure washer, be sure to keep the engine outdoors and 20 feet from windows, doors, or vents as well. Never run your car or truck inside a garage that is attached to a house even with the garage door open.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section 2 -->
+        <div class="wrapper">
+            <div class="content-wrapper">
+                <div class="heading">
+                   Other Safety Tips 
+                </div>
+                <div class="content">
+                    <!-- Flood -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/flood.jpg);"></div>
+                        <div class="right"><a href="#" class="active">Flood Safety Tips</a></div>
+                    </div>
+                    <!-- Heat Wave -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/heatwave.jpg);"></div>
+                        <div class="right"><a href="heatwave.html">Heat Wave Safety Tips</a></div>
+                    </div>
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="thunderstorm.html">Thunder Safety Tips</a></div>
+                    </div>
+                </div>
+                <div class="content">
+                    <!-- Hail -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/hail.jpg);"></div>
+                        <div class="right"><a href="hail.html">Hail Safety Tips</a></div>
+                    </div>
+                    <!-- Forestfire -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/forest_fire.jpg);border: 2px solid #d8d8d8;"></div>
+                        <div class="right"><a href="forestfire.html">Forest-Fire Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+                
+                <div class="responsive_content">
+                    <!-- Thunder -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/thunderstrom.jpg);"></div>
+                        <div class="right"><a href="thunderstorm.html">Thunder Safety Tips</a></div>
+                    </div>
+                    <!-- Cyclone -->
+                    <div class="safety">
+                        <div class="left" style="background-image: url(images/cyclone.jpg);"></div>
+                        <div class="right"><a href="cyclone.html">Cyclone Safety Tips</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="wrapper">
+                <div class="footer-container">
+                    <div class="footer-left">WeaTherino</div>
+                    <div class="footer-center">
+                        <h4 class="list-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html"><i class="fa fa-house-chimney"></i>Home</a></li>
+                            <li><a href="about.html"><i class="fa fa-address-card"></i>About</a></li>
+                            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-right">
+                        <p class="copyright">This website is devloped by- Siliguri College( Dept. of Computer Science) <br/>&copy;2021-22</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            /* Responsive purpose */
+            function mobileMenu()
+                {
+                    var click = document.getElementById("mobile-menu-container");
+                    if(click.style.display === "block")
+                    {
+                        click.style.display= "none";
+                    }
+                    else {
+                        click.style.display = "flex";
+                    }
+                    
+                }
+
+            function normal() {
+                var click = document.getElementById("mobile-menu-container");
+                if(click.style.display === "none")
+                {
+                    click.style.display= "block";
+                }
+                else {
+                    click.style.display = "none"
+                }
+            }
+        </script> 
+        <script src="https://kit.fontawesome.com/124cc9a039.js" crossorigin="anonymous"></script>
+        <script>
+            var loading= document.getElementById("loader");
+            window.addEventListener("load",function(){
+                loading.style.display= "none";
+            })
+        </script>
+    </body>
+</html>
